@@ -37,7 +37,7 @@ class Labyrinth
     report = api.post do |req|
       req.url '/report'
       req.headers['Content-Type'] = 'application/json'
-      req.body = JSON({ roomIds: broken_lights(data), challenge_code: code(data) })
+      req.body = JSON({ roomIds: broken_lights(data), challenge: code(data) })
     end
     report.body
   end
